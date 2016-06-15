@@ -26,7 +26,10 @@ app.set('view engine', 'ejs');
 
 app.use(require('morgan')('dev'));
 app.use(cookieParser());
-app.use(require('body-parser')());
+//app.use(require('body-parser')());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+
 app.use(require('method-override')());
 app.use(session({ secret: 'whatever' }));
 app.use(passport.initialize());
