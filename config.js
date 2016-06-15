@@ -8,6 +8,6 @@ module.exports.settings = {
     callbackUrl: 'https://azureadnodesample.azurewebsites.net/auth/waad/callback',
     resource: 'https://graph.windows.net',
     //mongodb: 'mongodb://admin:admin@ds038739.mlab.com:38739/hrdb'
-    mongodb:'mongodb://https://azureadnodesample.azurewebsites.net/myapp'
+    //mongodb:'mongodb://https://azureadnodesample.azurewebsites.net/myapp'
     
 };

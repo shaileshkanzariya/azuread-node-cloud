@@ -12,10 +12,10 @@ var db = require('./db');
 var oauth = require('./oauth');
 var bodyParser = require('body-parser');
 // get mongo User model
-var User = db.getUserModel(config);
+//var User = db.getUserModel(config);
 
 // get passport reference from factory
-var passport = require('./passport').getPassport(config, oauth, User);
+var passport = require('./passport').getPassport(config, oauth, 'User');
 
 var app = express();
 
