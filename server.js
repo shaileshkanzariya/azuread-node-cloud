@@ -10,7 +10,7 @@ var endpoints = require('./endpoints');
 var config = require('./config').settings;
 var db = require('./db');
 var oauth = require('./oauth');
-
+var bodyParser = require('body-parser');
 // get mongo User model
 var User = db.getUserModel(config);
 
@@ -29,6 +29,7 @@ app.use(cookieParser());
 //app.use(require('body-parser')());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(require('method-override')());
 app.use(session({ secret: 'whatever' }));
